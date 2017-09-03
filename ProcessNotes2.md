@@ -14,3 +14,10 @@
 - Remove all sales records for property where Building Type is Missing
 - Remove records where Building Type is Commercial
 - Remove all sales records for mobile/manufactured housing as not in our business scope
+
+## Sub Area Detail Prep
+- Remove all data where area = Null
+- Need to transpose data, so that each row is a unique record
+### Transpose Data
+- Add variable AccCardSub to make each row unique
+- Use nested formulas to transpose data to new variable columns for sketched and finished area
