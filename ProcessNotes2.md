@@ -17,6 +17,11 @@
 - Remove record that is missing key information or 1 of the records if info matches
 - Change remaining card numbers to 1
 - Add variable concatenating Account number and card number
+- Remove records where Year Built is 0
+- Remove records where lot dimensions shows invalid data
+- Move lot dimensions to end
+- Scan for IRR and Missing. New variable LotType = "Normal," "Irregular," or "Missing"
+- Remove IRR from LotDimensions
 
 ## Sales Data Prep
 - Remove all Sales Data records where the sales price is 0
@@ -27,9 +32,6 @@
 - Remove all sales records for property where Building Type is Missing
 - Remove records where Building Type is Commercial
 - Remove all sales records for mobile/manufactured housing as not in our business scope
-
-## Property Data Prep
-- Remove all records of vacant land
 
 ## Sub Area Detail Prep
 - Remove all data where area = Null
