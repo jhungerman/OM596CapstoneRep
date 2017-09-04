@@ -5,6 +5,15 @@
 - Sales Data has 22152 records over 2 years
 
 # Data Preparation
+
+## Property Data Prep
+- Data contains duplicate account number with separate cards. Need to determine best way to eliminate duplicates
+- Accounts with multiple cards seem to be summed to the TotalAppraisal & GrossFInishedAre.
+- Remove all records of vacant land
+- Remove all records of yard items only
+- Remove all commercial structures
+- Remove all mobile / manufactured / modular housing
+
 ## Sales Data Prep
 - Remove all Sales Data records where the sales price is 0
 - Remove all Sales Data records where Deed Type = MULTIPLE PARCEL
@@ -15,9 +24,13 @@
 - Remove records where Building Type is Commercial
 - Remove all sales records for mobile/manufactured housing as not in our business scope
 
+## Property Data Prep
+- Remove all records of vacant land
+
 ## Sub Area Detail Prep
 - Remove all data where area = Null
 - Need to transpose data, so that each row is a unique record
 ### Transpose Data
 - Add variable AccCardSub to make each row unique
+- Remove spaces from Sub Area names
 - Use nested formulas to transpose data to new variable columns for sketched and finished area
