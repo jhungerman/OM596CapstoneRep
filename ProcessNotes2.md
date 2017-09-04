@@ -13,6 +13,10 @@
 - Remove all records of yard items only
 - Remove all commercial structures
 - Remove all mobile / manufactured / modular housing
+- Scan remaining accounts for duplicates on both account and card
+- Remove record that is missing key information or 1 of the records if info matches
+- Change remaining card numbers to 1
+- Add variable concatenating Account number and card number
 
 ## Sales Data Prep
 - Remove all Sales Data records where the sales price is 0
