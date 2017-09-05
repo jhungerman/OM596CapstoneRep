@@ -22,6 +22,12 @@
 - Move lot dimensions to end
 - Scan for IRR and Missing. New variable LotType = "Normal," "Irregular," or "Missing"
 - Remove IRR from LotDimensions
+- Split LotDimensions using Text-to-Columns and 'X' as delimiter
+- Count number of active dimensions 1-7
+- Determined that some dimensions are marked 'M.' Follow-up with Bryce on whether this is Metric.
+- Added column for Metric v English until Bryce response
+- For comparison purposes I formatted everything as text. Add columns to convert lot dims to numeric for calculation
+- Calculate average lot dim. If Missing then 0. Remove zeros.
 
 ## Sales Data Prep
 - Remove all Sales Data records where the sales price is 0
