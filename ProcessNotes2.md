@@ -26,8 +26,13 @@
 - Count number of active dimensions 1-7
 - Determined that some dimensions are marked 'M.' Follow-up with Bryce on whether this is Metric.
 - Added column for Metric v English until Bryce response
+	- Bryce responded that the 'M' is for manual calculation. Change variable to Manual v Automatic
 - For comparison purposes I formatted everything as text. Add columns to convert lot dims to numeric for calculation
 - Calculate average lot dim. If Missing then 0. Remove zeros.
+- Apostrophes in some lot dimaensions. Remove.
+- Some lot dimensions were missing delimeters. Adjust.
+- Handful of measurements had extended inch values. Convert to decimal.
+- Re-run formulas
 
 ## Sales Data Prep
 - Remove all Sales Data records where the sales price is 0
