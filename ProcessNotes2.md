@@ -29,7 +29,7 @@
 	- Bryce responded that the 'M' is for manual calculation. Change variable to Manual v Automatic
 - For comparison purposes I formatted everything as text. Add columns to convert lot dims to numeric for calculation
 - Calculate average lot dim. If Missing then 0. Remove zeros.
-- Apostrophes in some lot dimaensions. Remove.
+- Apostrophes in some lot dimensions. Remove.
 - Some lot dimensions were missing delimeters. Adjust.
 - Handful of measurements had extended inch values. Convert to decimal.
 - Re-run formulas
