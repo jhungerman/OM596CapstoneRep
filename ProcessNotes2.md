@@ -33,6 +33,7 @@
 - Some lot dimensions were missing delimeters. Adjust.
 - Handful of measurements had extended inch values. Convert to decimal.
 - Re-run formulas
+- There are several subdivision names with extra characters. I ran a pivot table to identify and correct.
 
 ## Sales Data Prep
 - Remove all Sales Data records where the sales price is 0
