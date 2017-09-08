@@ -34,16 +34,21 @@
 - Handful of measurements had extended inch values. Convert to decimal.
 - Re-run formulas
 - There are several subdivision names with extra characters. I ran a pivot table to identify and correct.
+- LotDimCount of 2 is actually a rectangle. Change all 2s to 4
+- Calculate estimated square footage using the formula: area= (AvgDim^2*LotDimCount)/(4*tan(PI()/LotDimCount)) (Simmons, 2017)
+- 1486 records with missing data. How do I handle this? Will determine after transferring to Sales Data sheet
 
 ## Sales Data Prep
+- Sales Data is the primary sheet as it contains the sales price information.
 - Remove all Sales Data records where the sales price is 0
 - Remove all Sales Data records where Deed Type = MULTIPLE PARCEL
 - For Prep work, added new Variable AccCard (Account + Card) to link Prop Data Sheet
-- Brought over Vacant variable and Build Type variable from PropData to SalesData
-- Remove all sales records for vacant land
-- Remove all sales records for property where Building Type is Missing
-- Remove records where Building Type is Commercial
-- Remove all sales records for mobile/manufactured housing as not in our business scope
+- Bring over variables from Property Data
+	- AccountNumber:	Not needed, coded into AccCard
+	- CardNumber:		Not needed, coded into AccCard
+	- ParcelID:		Not needed, superfluous ID field
+	- PrimaryLandUse:	All "RS", will have no value, do not move
+
 
 ## Sub Area Detail Prep
 - Remove all data where area = Null
@@ -52,3 +57,9 @@
 - Add variable AccCardSub to make each row unique
 - Remove spaces from Sub Area names
 - Use nested formulas to transpose data to new variable columns for sketched and finished area
+
+
+
+References:
+
+Simmons, B. (2017, July 19). Area of a Regular Polygon. Retrieved September 07, 2017, from http://www.mathwords.com/a/area_regular_polygon.htm
