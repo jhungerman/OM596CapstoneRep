@@ -38,11 +38,22 @@
 - Calculate estimated square footage using the formula: area= (AvgDim^2*LotDimCount)/(4*tan(PI()/LotDimCount)) (Simmons, 2017)
 - 1486 records with missing data. How do I handle this? Will determine after transferring to Sales Data sheet
 
+## Sub Area Detail Prep
+- Data is in a standard spreadsheet format with multiple rows per account. Need to format into database style
+- Copy data to new sheet
+- Create new variable AccCard to combine account number and card. This will key into other sheets
+- Insert Pivot Table with AccCard as rows, SubArea as columns, sum Total Sketched Area & sum Total Finished Area as Detail
+- Run formulas: =trim(B1)&"Sk" in cell B2, =trim(B1)&"Fin" in cell B3 for column names. Fill accross.
+- Remove variables where sum= 0
+- Remove "Sk" variables where sum "Sk" = sum "Fin"
+- Replace all missing values with 0
+
 ## Sales Data Prep
 - Sales Data is the primary sheet as it contains the sales price information.
 - Remove all Sales Data records where the sales price is 0
 - Remove all Sales Data records where Deed Type = MULTIPLE PARCEL
-- For Prep work, added new Variable AccCard (Account + Card) to link Prop Data Sheet
+- For Prep work, added new Variable AccCard (Account + Card) to link Prop Data WS & Sub Area WS
+- Created Access Database for linking sheets and creating main database sheet
 - Bring over variables from Property Data
 	- AccountNumber:	Not needed, coded into AccCard
 	- CardNumber:		Not needed, coded into AccCard
@@ -50,13 +61,7 @@
 	- PrimaryLandUse:	All "RS", will have no value, do not move
 
 
-## Sub Area Detail Prep
-- Remove all data where area = Null
-- Need to transpose data, so that each row is a unique record
-### Transpose Data
-- Add variable AccCardSub to make each row unique
-- Remove spaces from Sub Area names
-- Use nested formulas to transpose data to new variable columns for sketched and finished area
+
 
 
 
