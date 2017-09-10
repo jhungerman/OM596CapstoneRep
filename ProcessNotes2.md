@@ -54,11 +54,38 @@
 - Remove all Sales Data records where Deed Type = MULTIPLE PARCEL
 - For Prep work, added new Variable AccCard (Account + Card) to link Prop Data WS & Sub Area WS
 - Created Access Database for linking sheets and creating main database sheet
-- Bring over variables from Property Data
-	- AccountNumber:	Not needed, coded into AccCard
-	- CardNumber:		Not needed, coded into AccCard
-	- ParcelID:		Not needed, superfluous ID field
-	- PrimaryLandUse:	All "RS", will have no value, do not move
+	- Link to tables Property Data WS, Sales Data WS, and Sub Area WS
+	- 1st query all variables from Sales Data and Property Data, inner join on AccCard as qry_PropToSales
+	- 2nd query all variables from qry_PropToSales and Sub Area Data, inner join on SalesDataWS.AccCard and AccCard as qry_SubToSalesAndProp
+	- Export data to Excel as FullVariableData
+		- Review individual variables and use to formulate Create Table Query
+			- SalesDataWS.AccCard:	Primary key. Keep this as AccCard. Remove the other 2 from other worksheets
+			- AccountNumber:	Not needed, coded into AccCard (Three separate instances. None included)
+			- CardNumber:		Not needed, coded into AccCard (Three separate instances. None included)
+			- SaleDate:		Time of sale could be a factor. Include
+			- SeqNumber:		Unsure of definition. Follow-up with Bryce. Include for now.
+			- SalePrice:		Keep
+			- LegalReference:	Transaction ID code. Exclude
+			- Book:			Transaction ID code. Exclude
+			- Page:			Transaction ID code. Exclude
+			- NALCode:		Keep
+			- DeedType:		Keep
+			- ParcelID:		Not needed, superfluous ID field
+			- PrimaryLandUse:	All "RS", will have no value, do not move
+			- StreetNumber:		Likely will have no value, but keep for now
+			- StreetName:		Likely will have no value, but keep for now
+			- PropertyZip:		Keep
+			- Subdivision:		Keep
+			- TotalAppraisal:	Keep
+			- CardLandUse:		All "RS", will have no value, do not move
+			- CardAppraisal:	Holdover from having multiple cards. Data may be invalid. Exclude.
+			- YearBuilt:		Keep
+			- EffectiveYearBuilt:	This may have invalid data. Holdover from multiple cards. Exclude.
+			- Block:		This variable is subdivision specific. No value. Exclude.
+			- Lot:			This variable is subdivision specific. No value. Exclude.
+
+
+
 
 
 
