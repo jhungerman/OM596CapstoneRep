@@ -63,7 +63,7 @@
 			- AccountNumber:	Not needed, coded into AccCard (Three separate instances. None included)
 			- CardNumber:		Not needed, coded into AccCard (Three separate instances. None included)
 			- SaleDate:		Time of sale could be a factor. Include
-			- SeqNumber:		Unsure of definition. Follow-up with Bryce. Include for now.
+			- SeqNumber:		Unsure of definition. **Follow-up with Bryce.** Include for now.
 			- SalePrice:		Keep
 			- LegalReference:	Transaction ID code. Exclude
 			- Book:			Transaction ID code. Exclude
@@ -72,8 +72,10 @@
 			- DeedType:		Keep
 			- ParcelID:		Not needed, superfluous ID field
 			- PrimaryLandUse:	All "RS", will have no value, do not move
-			- StreetNumber:		Likely will have no value, but keep for now
-			- StreetName:		Likely will have no value, but keep for now
+			- StreetNumber:		~~Likely will have no value, but keep for now~~
+						Exclude
+			- StreetName:		~~Likely will have no value, but keep for now~~
+						Exclude
 			- PropertyZip:		Keep
 			- Subdivision:		Keep
 			- TotalAppraisal:	Keep
@@ -83,6 +85,29 @@
 			- EffectiveYearBuilt:	This may have invalid data. Holdover from multiple cards. Exclude.
 			- Block:		This variable is subdivision specific. No value. Exclude.
 			- Lot:			This variable is subdivision specific. No value. Exclude.
+			- Vacant_Improved	All "IMPROVED", exclude
+			- BuildingTypeCode	Coded value of BuildingType. Exclude
+			- BuildingType		Obscure description of property that has more to do with architecture. Exclude	
+			- BuildingGrade		**Need better definition from Bryce.** Seems valuable. Keep.
+			- StoryHeight		Keep
+			- StoryHgtDescription	Just a description of StoryHeight. Exclude
+			- Foundation		Exclude
+			- RoofStructure		Exclude
+			- RoofMaterial		Keep for now
+			- ExteriorPrimeWall	Keep
+			- Fireplaces		Keep
+			- TotalGrossArea	Keep
+			- FinishedArea		May have colinearity issues with Gross Area, but keep
+			- CalcMethod		Likely not useful, but keep through the remainder of data cleansing
+			- LotDimensions		Square footage all that is needed, exclude
+			- LotType		Likely not useful, but keep through the remainder of data cleansing
+			- LotDim (X:X)		Exclude
+			- AvgDim		This was useful for calculating SqFt. Exclude now.
+			- EstSF			Keep
+			- SubArea Dims		Keep all
+		- Create new data table and export to Excel
+##Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
+	- Convert SaleDate to Excel date code
 
 
 
