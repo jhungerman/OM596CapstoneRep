@@ -106,8 +106,22 @@
 			- EstSF			Keep
 			- SubArea Dims		Keep all
 		- Create new data table and export to Excel
+###Data Preparation Post Secondary Steps
+- Found 1 record missing SalePrice. Remove record.
+- Found 2 records missing PropertyZip. Remove records.
+- 1000+ records with missing subdivision.
+	296 records have street names that correspond to unique subdivisions. Update records.
+- Created new variable AccCardSale to create unique id for each record since there are multiple sales on some properties
+- 57 records with no street address. Remove
+
 ##Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
 	- Convert SaleDate to Excel date code
+	- Used SAS to convert to SAS data table
+
+#Data Exploration
+- Initial data set has 57 variables and 14192 observations when moved to Enterprise Miner 14.1
+- Reviewed data and determined further data cleansing was necessary. Move back.
+
 
 
 
