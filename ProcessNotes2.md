@@ -109,10 +109,14 @@
 ###Data Preparation Post Secondary Steps
 - Found 1 record missing SalePrice. Remove record.
 - Found 2 records missing PropertyZip. Remove records.
-- 1000+ records with missing subdivision.
-	296 records have street names that correspond to unique subdivisions. Update records.
+- 1206 records with missing subdivision.
+	- 296 records have street names that correspond to unique subdivisions. Update records. Leaves 914 records without Sub
+	- Produced list of streets, numbers, and subs. Scan list to see if missing subs can be identified by similar addresses
+		- 679 remaining records with missing subdivision. Update to Street name. Proximity more important than actual subdivision
+		- Move back to Data Exploration
 - Created new variable AccCardSale to create unique id for each record since there are multiple sales on some properties
-- 57 records with no street address. Remove
+- 57 records with no street address. ~~Remove~~ This was due to a data conversion error between Excel & Access. Fixed.
+	- 1 record remaining with no street address. Remove
 
 ##Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
 	- Convert SaleDate to Excel date code
