@@ -117,6 +117,13 @@
 - Created new variable AccCardSale to create unique id for each record since there are multiple sales on some properties
 - 57 records with no street address. ~~Remove~~ This was due to a data conversion error between Excel & Access. Fixed.
 	- 1 record remaining with no street address. Remove
+- 9% data missing EstSF (1291 records). Ran table to calculate Mean and StdDev by Subdivision. 
+	- Calculated 1 StdDev above and below mean
+	- ~~Calculated random number between StdDev min and max as estimate. Any <0 were calculated again between mean and 1 StdDev above~~
+		- This method, while seemingly statistically valid, would still overweight missing values to the calculated number
+		- Revert data
+- 657 remining records where there was no square footage estimate for the given subdivision
+
 
 ##Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
 	- Convert SaleDate to Excel date code
