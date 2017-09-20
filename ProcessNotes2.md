@@ -122,7 +122,11 @@
 	- ~~Calculated random number between StdDev min and max as estimate. Any <0 were calculated again between mean and 1 StdDev above~~
 		- This method, while seemingly statistically valid, would still overweight missing values to the calculated number
 		- Revert data
-- 657 remining records where there was no square footage estimate for the given subdivision
+	- Since the size of a yard is often affected by the size of the house, I calculated an Estimated sqFt using Total Area
+		- (Est SF for the subdivision)*(size of dwelling/average size of dwelling for sub)
+		- This created some instances where the yard was greater than 1 standard deviation of the mean SF for the sub
+			- For these I limited the max to the avg + 1 standard deviation
+	- 657 remining records where there was no square footage estimate for the given subdivision
 
 
 ##Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
