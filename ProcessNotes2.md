@@ -127,6 +127,8 @@
 		- This created some instances where the yard was greater than 1 standard deviation of the mean SF for the sub
 			- For these I limited the max to the avg + 1 standard deviation
 	- 657 remining records where there was no square footage estimate for the given subdivision
+		- I ran the same process using Zip as I had using subdivision.
+	- 4 records remaining with no EstSF. Delete from table
 
 
 ##Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
