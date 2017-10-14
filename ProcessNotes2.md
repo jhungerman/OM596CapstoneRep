@@ -106,7 +106,7 @@
 			- EstSF			Keep
 			- SubArea Dims		Keep all
 		- Create new data table and export to Excel
-###Data Preparation Post Secondary Steps
+### Data Preparation Post Secondary Steps
 - Found 1 record missing SalePrice. Remove record.
 - Found 2 records missing PropertyZip. Remove records.
 - 1206 records with missing subdivision.
@@ -152,11 +152,11 @@
 			- Removed low val/low var, mid val/high var, high val/low var
 
 
-##Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
+## Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
 	- Convert SaleDate to Excel date code
 	- Used SAS to convert to SAS data table
 
-#Data Exploration
+# Data Exploration
 - Initial data set has 57 variables and 14192 observations when moved to Enterprise Miner 14.1
 - Reviewed data and determined further data cleansing was necessary. Move back.
 
