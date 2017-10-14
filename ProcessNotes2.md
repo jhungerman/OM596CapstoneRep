@@ -129,6 +129,27 @@
 	- 657 remining records where there was no square footage estimate for the given subdivision
 		- I ran the same process using Zip as I had using subdivision.
 	- 4 records remaining with no EstSF. Delete from table
+- Subdivision has too many levels. How do I address?
+	- Find levels based on appraised value and variance / standard deviation
+		- Needs to be done on full property data not just the sales subset
+		- Calculated average appraised value for all properties as Mid Value, 1 stdev below as Low Value, and 1 stdev above as High Value
+			- Low = $88,593
+			- Mid = $165,099
+			- High = $241,605
+		- Calculated absolute Z score for average appraised value by subdivision and used to separate variability levels
+			- Low = 0.08
+			- Mid = 1.0
+			- High = 1.93
+		- Created new variable ValVar to concatenate value bin and variability bin
+		- Added 9 dummy, binary variables for the 9 ValVar categories for future regression
+			- Only 6 categories contained data
+				- Low value, high variability
+				- Low value, mid variability
+				- Mid value, low variability
+				- Mid value, mid variability
+				- High value, mid variability
+				- High value, high variability
+			- Removed low val/low var, mid val/high var, high val/low var
 
 
 ##Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
