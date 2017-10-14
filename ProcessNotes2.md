@@ -150,6 +150,13 @@
 				- High value, mid variability
 				- High value, high variability
 			- Removed low val/low var, mid val/high var, high val/low var
+		- Not enough separation in midrange
+			- Set 2 new levels on value (1/3 stdev)
+				- Mid Low = $139,852
+				- Mid High = $190,346
+			- ~~Set 2 new levels on variability (1/3 stdev)~~
+				- ~~Mid Low = 0.70~~
+				- ~~Mid High = 1.31~~
 
 
 ## Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
