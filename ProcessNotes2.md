@@ -176,7 +176,8 @@
 - Ran 1st regression analysis
 	- R-SQ 36%, remove records NAL Code = Disqualified
 - Ran 2nd analysis
-	- Too complex. R
+	- Too complex. Need to remove records in DeedType other than QUALIFIED/ACCEPTED, remove NALCode and Deed Type Columns
+	- Review SubArea variables and remove those with no usable data (found during Minitab exploration)
 
 
 
