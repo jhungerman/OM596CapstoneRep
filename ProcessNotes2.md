@@ -157,6 +157,12 @@
 			- ~~Set 2 new levels on variability (1/3 stdev)~~
 				- ~~Mid Low = 0.70~~
 				- ~~Mid High = 1.31~~
+			- Could not get a more representative sample by splitting variability further
+- StreetNum, StreetName, Subdivision not longer needed. Remove.
+- Changed BuildingGrade to Ordinal from character
+	- BELOW AVERAGE = -1
+	- AVERAGE = 0
+	- ABOVE AVERAGE = 1
 
 
 ## Combined Data Set Prep **(AssessmentDataSetFromAccess.xlsx)**
@@ -164,8 +170,13 @@
 	- Used SAS to convert to SAS data table
 
 # Data Exploration
-- Initial data set has 57 variables and 14192 observations when moved to Enterprise Miner 14.1
+- ~~Initial data set has 57 variables and 14192 observations when moved to Enterprise Miner 14.1~~
+- Data has 67 variables and 11845 observations
 - Reviewed data and determined further data cleansing was necessary. Move back.
+- Ran 1st regression analysis
+	- R-SQ 36%, remove records NAL Code = Disqualified
+- Ran 2nd analysis
+	- Too complex. R
 
 
 
