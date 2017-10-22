@@ -172,12 +172,17 @@
 # Data Exploration
 - ~~Initial data set has 57 variables and 14192 observations when moved to Enterprise Miner 14.1~~
 - Data has 67 variables and 11845 observations
+- A few records had NULL in NALCode. Used DeedType to dtermine actual status
+	- One record had null for both. Delete
 - Reviewed data and determined further data cleansing was necessary. Move back.
 - Ran 1st regression analysis
 	- R-SQ 36%, remove records NAL Code = Disqualified
 - Ran 2nd analysis
 	- Too complex. Need to remove records in DeedType other than QUALIFIED/ACCEPTED, remove NALCode and Deed Type Columns
 	- Review SubArea variables and remove those with no usable data (found during Minitab exploration)
+		- CANSk
+		- OFAFin
+		- OPUISk
 
 
 
