@@ -1,4 +1,4 @@
-# Initial Notes ..
+# Initial Notes .
 - Data pull consists of 3 sheets
 - Property Data has 15923 records
 - Sub Area Detail has 53713 records
