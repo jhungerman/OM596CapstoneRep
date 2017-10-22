@@ -1,4 +1,4 @@
-# Business Understanding & Basic Assumptions
+# Business Understanding & Basic Assumptions ..
 ## Financial
 ### Cash to Close
 - $30,000 in starting personal capital
