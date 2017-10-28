@@ -171,7 +171,11 @@
 
 # Data Exploration
 - ~~Initial data set has 57 variables and 14192 observations when moved to Enterprise Miner 14.1~~
-- Data has 67 variables and 11845 observations
+- Data has 64 variables and 11844 observations
+	- Added 3 SAS Sets:
+		- Full set
+		- Qualified / Accepted Only
+		- Disqualified
 - A few records had NULL in NALCode. Used DeedType to dtermine actual status
 	- One record had null for both. Delete
 - Reviewed data and determined further data cleansing was necessary. Move back.
@@ -183,7 +187,11 @@
 		- CANSk
 		- OFAFin
 		- OPUISk
-
+- Property zips 37040, 37042, and 37043 contain the highest population density in clarksville. Target those Zip codes only.
+	- 11188 remaining observations
+- There are many newer properties that have multiple sales. THe first being far below appraised value. This is likely new construction.
+	- Delete from table where year built >= 2015 and sale price < 50% of appraised value.
+	- 10578 remaining observations
 
 
 
