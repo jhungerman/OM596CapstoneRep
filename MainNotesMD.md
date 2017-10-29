@@ -198,9 +198,12 @@
 	- A lot of variation in newer homes. We won't be targeting new construction. Remove >2015
 	- Initial business plan will have limited funding. For now remove >= $400K
 	- Major issues in value where DeedType is "SALE BEING REVIEWED%". Remove
-	- Risk too great for any property sale <100K. Remove
-	- We reasonably will not be dealing with properties that will sell >$250K. Remove
-
+	- ~~Risk too great for any property sale <100K. Remove~~
+	- ~~We reasonably will not be dealing with properties that will sell >$250K. Remove~~
+	- Test changing YearBuilt as Categorical
+		- Made model worse
+	- Remove extreme outliers from dataset
+	- Remove records where DeedType != "QUALIFIED/ACCEPTED"
 
 
 
