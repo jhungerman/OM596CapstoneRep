@@ -192,6 +192,14 @@
 - There are many newer properties that have multiple sales. THe first being far below appraised value. This is likely new construction.
 	- Delete from table where year built >= 2015 and sale price < 50% of appraised value.
 	- 10578 remaining observations
+- Developed a usable regression model
+	- 2 outliers in residual plot. Remove
+	- Probability plot of residuals S-shaped. Fails normality assumption
+	- A lot of variation in newer homes. We won't be targeting new construction. Remove >2015
+	- Initial business plan will have limited funding. For now remove >= $400K
+	- Major issues in value where DeedType is "SALE BEING REVIEWED%". Remove
+	- Risk too great for any property sale <100K. Remove
+	- We reasonably will not be dealing with properties that will sell >$250K. Remove
 
 
 
